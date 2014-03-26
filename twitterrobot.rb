@@ -9,7 +9,7 @@ puts "Starting Program"
    config.access_token_secret = "Paste_Your_Key_Here"
  end
 
-client.search("justin bieber", :lang => "en", :result_type => "popular").take(2).collect do |tweet|
+client.search("justin bieber", :lang => "en", :result_type => "recent").take(2).collect do |tweet|
 	puts "Searching Twitter..."
 	client.retweet(tweet.id)
 	puts "Retweeted!"
